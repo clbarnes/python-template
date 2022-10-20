@@ -2,7 +2,7 @@
 name = "{{cookiecutter.package_name}}"
 url = "{{cookiecutter.url}}"
 authors = [
-    { name = "{{cookiecutter.author}}", email = "cookiecutter.email" },
+    { name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}" },
 ]
 description = "{{cookiecutter.description}}"
 readme = "README.md"
