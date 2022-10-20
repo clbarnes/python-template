@@ -1,7 +1,9 @@
 [project]
 name = "{{cookiecutter.package_name}}"
 url = "{{cookiecutter.url}}"
-authors = ["{{cookiecutter.author}}"]
+authors = [
+    { name = "{{cookiecutter.author}}", email = "cookiecutter.email" },
+]
 description = "{{cookiecutter.description}}"
 readme = "README.md"
 requires-python = ">=3.8, <4.0"

@@ -3,5 +3,6 @@
   "project_name": "{{cookiecutter.package_name}}",
   "url": "https://github.com/clbarnes/{{cookiecutter.package_name}}",
   "author": "Chris L. Barnes",
+  "email": "cb619@cam.ac.uk",
   "description": ""
 }
