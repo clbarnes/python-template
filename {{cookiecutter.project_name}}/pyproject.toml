@@ -30,7 +30,9 @@ include = ["{{cookiecutter.package_name}}*"]
 [tool.setuptools_scm]
 write_to = "src/{{cookiecutter.package_name}}/version.py"
 
+[tool.black]
+extend-exclude = '^/src/{{cookiecutter.package_name}}/version.py'
+
 [tool.isort]
 profile = "black"
 multi_line_output = 3
-extend-exclude = "src/{{cookiecutter.package_name}}/version.py"
