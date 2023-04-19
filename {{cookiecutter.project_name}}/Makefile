@@ -1,16 +1,15 @@
-PY_PATHS = src tests
-
 .PHONY: format
 format:
-	ruff check --fix-only . \
-	&& black .
+	ruff check --fix-only . &&\
+	black .
 
-.PHONY: lint
-lint:
+.PHONY: lint-notype
+lint-notype:
 	black --check .
 	ruff check .
 
-lint-type: lint
+.PHONY: lint
+lint: lint-notype
 	mypy .
 
 .PHONY: test
@@ -23,8 +22,8 @@ install:
 
 .PHONY: install-dev
 install-dev:
-	pip install -r requirements.txt \
-	&& pip install -e .
+	pip install -r requirements.txt &&\
+	pip install -e .
 
 .PHONY: clean-docs
 clean-docs:
@@ -32,5 +31,5 @@ clean-docs:
 
 .PHONY: docs
 docs: clean-docs
-	mkdir -p docs \
-	&& pdoc --html --output-dir docs {{cookiecutter.package_name}}
+	mkdir -p docs &&\
+	pdoc --html --output-dir docs {{cookiecutter.package_name}}
