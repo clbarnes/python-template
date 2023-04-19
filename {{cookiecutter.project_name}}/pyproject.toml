@@ -8,14 +8,10 @@ write_to = "src/{{cookiecutter.package_name}}/version.py"
 [tool.black]
 extend-exclude = '^/src/{{cookiecutter.package_name}}/version.py'
 
-[tool.isort]
-profile = "black"
-multi_line_output = 3
-
 [tool.mypy]
 ignore_missing_imports = true
+python_version = "3.8"
 
-[tool.flake8]
-max-line-length = 88
-extend-ignore = ["E203"]
-exclude = ["venv"]
+[tool.ruff]
+extend-exclude = ["docs", "venv", "^/src/{{cookiecutter.package_name}}/version.py"]
+target-version = "py38"
